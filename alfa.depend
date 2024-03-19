@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1710841375 source:c:\users\mesta\documents\c\alfa\main.c
+	<stdio.h>
+	<stdlib.h>
+
