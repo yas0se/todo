@@ -20,7 +20,7 @@
 ![image](https://github.com/yas0se/todo/assets/128167310/141e689c-f4ab-4373-8714-da2b99139ce2 "liste de taches")
 
 
-## Blocks of code
+## Menu code
 
 ```
     do{
