@@ -15,7 +15,7 @@
 
 ## Images
 
-![image](https://github.com/yas0se/todo/assets/128167310/9ab0464a-557f-44bd-aad1-1ec370df9fb9 "le menu")
+![image](https://github.com/yas0se/todo/assets/128167310/9ab0464a-557f-44bd-aad1-1ec370df9fb9 "Menu")
 
 ![image](https://github.com/yas0se/todo/assets/128167310/141e689c-f4ab-4373-8714-da2b99139ce2 "liste de taches")
 
