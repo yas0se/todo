@@ -69,7 +69,7 @@ void deleteTask() {
 }
 
 void filterTasksByPriority(int priority) {
-    printf("Taches filtrées par priorité %d:\n", priority);
+    printf("Taches filtrÃ©es par prioritÃ© %d:\n", priority);
     printf("-------------------------------------------------------------\n");
     printf("Nom de la tache   | Priorite | Date d'echeance | Terminee\n");
     printf("-------------------------------------------------------------\n");
@@ -79,6 +79,23 @@ void filterTasksByPriority(int priority) {
         }
     }
     printf("-------------------------------------------------------------\n");
+}
+
+void modifyTask() {
+    int taskIndex;
+    printf("Entrez l'indice de la tache a modifier : ");
+    scanf("%d", &taskIndex);
+    if (taskIndex >= 0 && taskIndex < numTasks) {
+        printf("Entrez le nouveau nom de la tache : ");
+        scanf("%s", tasks[taskIndex].name);
+        printf("Entrez la nouvelle priorite de la tache (1 - 10) : ");
+        scanf("%d", &tasks[taskIndex].priority);
+        printf("Entrez la nouvelle date d'echeance (YYYY-MM-DD) : ");
+        scanf("%s", tasks[taskIndex].deadline);
+        printf("Tache modifiee avec succes.\n");
+    } else {
+        printf("Indice de tache invalide.\n");
+    }
 }
 
 int main()
@@ -95,8 +112,9 @@ int main()
     printf("2. Mark Task as Completed \n");
     printf("3. List all tasks\n");
     printf("4. delete Task\n");
-    printf("5. filter Tasks By Priority\n");
-    printf("6. Exit\n");
+    printf("5. modify Task\n");
+    printf("6. filter Tasks By Priority\n");
+    printf("7. Exit\n");
     scanf("%d", &choice);
     switch(choice) {
             case 1:
@@ -112,16 +130,19 @@ int main()
                 deleteTask();
                 break;
             case 5:
+                modifyTask();
+                break;
+            case 6:
                 printf("define Priority (1 - 10): \n ");
                 scanf("%d", &p);
                 filterTasksByPriority(p) ;
                 break;
-            case 6:
+            case 7:
                 printf("Au revoir!\n");
                 break;
             default:
                 printf("Choix invalide. Veuillez choisir une option valide.\n");
         }
-    } while(choice != 6);
+    } while(choice != 7);
     return 0;
 }
